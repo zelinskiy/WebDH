@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Diffie - Hellman</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <script src="./main.js"></script>
+    <p>Diffie - Hellman</p>
+
+    <table style=" border: 1px solid black;">
+      <tr>
+	<th>Diffie (We)</th>
+	<th>Hellman (They)</th>
+      </tr>
+      <tr>
+	<td id="cell1">P = <input id="p" value="23"/>
+	  <button onclick="p()">!</button>
+	  <br/>
+	  G = <input id="g" value="5"/>
+	  <button onclick="g()">!</button>
+	  <br/>
+	  <button onclick="sayPG()">say</button></td> 
+	<td id="cell2">P = <span id="p'"></span>
+	  <br/>
+	  G = <span id="g'"></span>
+	  <br/>
+	  <button onclick="generatePG()">gen</button>
+	  <button onclick="askPG()">ask</button>
+	  <button onclick="loadPG()"><-</button></td>
+      </tr>
+      <tr>
+	<td id="cell3">b = <span id="b0"></span>
+	  <br/>
+	  B = <input id="b"/>
+	  <button onclick="b()">!</button>
+	  <br/>
+	  <button onclick="sayB()">say</button></td>
+	<td id="cell4">a = <span id="a0">???</span>
+	  <br/>
+	  A = <span id="a"></span>
+	  <br/>
+	  <button onclick="generateA()">gen</button>
+	  <button onclick="askA()">ask</button></td>
+      </tr>
+      <tr>
+	<td id="cell5">K = <span id="k"></span>
+	  <button onclick="k()">!</button></td>
+	<td id="cell6">K = <span id="k'"></span>
+	  <button onclick="askK()">ask</button></td>
+      </tr>
+    </table>
+    <p>Status: <span id="status"></span></p>
+    <button onclick="test()">test</button>
+    
+  </body>
+</html>
